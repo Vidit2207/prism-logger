@@ -15,47 +15,47 @@ export class PrismLogger {
     );
   }
 
-  error(text: string | number | object) {
+  static error(text: string | number | object) {
     PrismLogger.log(text, "red");
   }
 
-  success(text: string | number | object) {
+  static success(text: string | number | object) {
     PrismLogger.log(text, "green");
   }
 
-  warning(text: string | number | object) {
+  static warning(text: string | number | object) {
     PrismLogger.log(text, "yellow");
   }
 
-  red(text: string | number | object) {
+  static red(text: string | number | object) {
     PrismLogger.log(text, "red");
   }
 
-  green(text: string | number | object) {
+  static green(text: string | number | object) {
     PrismLogger.log(text, "green");
   }
 
-  yellow(text: string | number | object) {
+  static yellow(text: string | number | object) {
     PrismLogger.log(text, "yellow");
   }
 
-  blue(text: string | number | object) {
+  static blue(text: string | number | object) {
     PrismLogger.log(text, "blue");
   }
 
-  magenta(text: string | number | object) {
+  static magenta(text: string | number | object) {
     PrismLogger.log(text, "magenta");
   }
 
-  cyan(text: string | number | object) {
+  static cyan(text: string | number | object) {
     PrismLogger.log(text, "cyan");
   }
 
-  white(text: string | number | object) {
+  static white(text: string | number | object) {
     PrismLogger.log(text, "white");
   }
 
-  logBg(
+  static logBg(
     text: string | number | object,
     font: string = "black",
     bg: string = "white"
