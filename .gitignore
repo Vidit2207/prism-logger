@@ -1,4 +1,12 @@
 # Logs
+
+# Ignore test-related files
+/coverage.data
+/coverage/
+
+# Build files
+/dist
+
 logs
 *.log
 npm-debug.log*
