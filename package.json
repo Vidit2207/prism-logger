@@ -2,15 +2,16 @@
   "name": "prism-logger",
   "version": "0.0.1",
   "description": "beautified logging",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./types/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "scripts": {
-    "test": "mocha ./tests/index.test.js",
-    "build": "tsup"
+    "test": "ts-node ./tests/index.test.ts",
+    "prepare": "npm run build",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

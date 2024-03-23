@@ -1,2 +1,3 @@
-# prism-logger
+# Prism Logger
+
 colourful logging in nodejs
