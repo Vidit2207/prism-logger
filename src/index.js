@@ -3,12 +3,12 @@
 
 import { option } from "./interface/options.interface";
 
-class PrismLogger {
+export class PrismLogger {
   constructor() {
     this.log("Logger instance created");
   }
 
-  log(text: string | number | object, color: string = "white") {
+  log(text, color = "white") {
     console.log(
       option.reset,
       option.bright,
@@ -18,51 +18,47 @@ class PrismLogger {
     );
   }
 
-  error(text: string | number | object) {
+  error(text) {
     this.log(text, "red");
   }
 
-  success(text: string | number | object) {
+  success(text) {
     this.log(text, "green");
   }
 
-  warning(text: string | number | object) {
+  warning(text) {
     this.log(text, "yellow");
   }
 
-  red(text: string | number | object) {
+  red(text) {
     this.log(text, "red");
   }
 
-  green(text: string | number | object) {
+  green(text) {
     this.log(text, "green");
   }
 
-  yellow(text: string | number | object) {
+  yellow(text) {
     this.log(text, "yellow");
   }
 
-  blue(text: string | number | object) {
+  blue(text) {
     this.log(text, "blue");
   }
 
-  magenta(text: string | number | object) {
+  magenta(text) {
     this.log(text, "magenta");
   }
 
-  cyan(text: string | number | object) {
+  cyan(text) {
     this.log(text, "cyan");
   }
 
-  white(text: string | number | object) {
+  white(text) {
     this.log(text, "white");
   }
 
-  logBg(
-    text: string | number | object,
-    font: string = "black",
-    bg: string = "white"
-  ) {
+  logBg(text, font = "black", bg = "white") {
     console.log(
       option.reset,
       option.bg[bg],
@@ -76,10 +72,10 @@ class PrismLogger {
 
 // module.exports = PrismLogger;
 
-const logger = new PrismLogger();
-const runTests = () => {
-  const temp = "This should be ";
-  logger.log(temp + "RED text", "red");
-};
+// const logger = new PrismLogger();
+// const runTests = () => {
+//   const temp = "This should be ";
+//   logger.log(temp + "RED text", "red");
+// };
 
-runTests();
+// runTests();

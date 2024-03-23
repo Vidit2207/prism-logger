@@ -4,12 +4,12 @@
   "description": "beautified logging",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "ts-node ./tests/index.test.ts",
+    "test": "mocha ./tests/index.test.js",
     "build": "tsup"
   },
   "repository": {
