@@ -1,7 +1,7 @@
 {
   "name": "prism-logger",
-  "version": "0.1.0",
-  "description": "beautified logging",
+  "version": "1.0.0",
+  "description": "beautified logging in nodejs",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -9,16 +9,25 @@
     "dist/**/*"
   ],
   "scripts": {
-    "test": "ts-node ./tests/index.test.ts",
+    "test": "npm run build && node --experimental-vm-modules node_modules/mocha/bin/mocha --experimental-vm-modules ./tests/index.test.mjs",
     "prepare": "npm run build",
     "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git@git_2207:Vidit2207/prism-logger.git"
+    "url": "git@github.com:Vidit2207/prism-logger.git"
   },
+  "homepage": "git@github.com:Vidit2207/prism-logger.git",
   "keywords": [
-    "logger"
+    "logger",
+    "colorful logger",
+    "logging",
+    "console log",
+    "colors",
+    "color-logging",
+    "terminal",
+    "developer-tools",
+    "server-logging"
   ],
   "author": "Vidit Modi",
   "license": "Apache-2.0",
@@ -26,10 +35,8 @@
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.30",
     "chai": "^3.5.0",
-    "chai-sinon": "^2.8.1",
     "mocha": "^10.3.0",
-    "ts-node": "^10.9.2",
-    "tsup": "^8.0.2",
+    "sinon": "^17.0.1",
     "typescript": "^5.4.3"
   }
 }

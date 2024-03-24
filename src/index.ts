@@ -69,4 +69,44 @@ export class PrismLogger {
       option.reset
     );
   }
+
+  static errorBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "red");
+  }
+
+  static successBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "green");
+  }
+
+  static warningBg(text: string | number | object) {
+    PrismLogger.logBg(text, "red", "yellow");
+  }
+
+  static redBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "red");
+  }
+
+  static greenBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "green");
+  }
+
+  static yellowBg(text: string | number | object) {
+    PrismLogger.logBg(text, "red", "yellow");
+  }
+
+  static blueBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "blue");
+  }
+
+  static magentaBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "magenta");
+  }
+
+  static cyanBg(text: string | number | object) {
+    PrismLogger.logBg(text, "white", "cyan");
+  }
+
+  static whiteBg(text: string | number | object) {
+    PrismLogger.logBg(text, "black", "white");
+  }
 }
