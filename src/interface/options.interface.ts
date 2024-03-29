@@ -65,3 +65,5 @@ export const option: Options = {
     gray: "\x1b[100m",
   },
 };
+
+export type text = boolean | string | object | number;

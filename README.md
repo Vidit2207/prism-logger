@@ -1,6 +1,6 @@
 # PrismLogger
 
-A simple and colorful logger for Node.js applications.
+A simple and colorful logger all types of JavaScript applications.
 
 ## Installation
 
@@ -11,6 +11,8 @@ npm install prism-logger
 ```
 
 ## Usage
+
+The package provides two different Loggers - PrismLogger for NodeJs applications and ConsoleLogger for browser consoles. You may use any one based on your project requirements, but the usage is same for the both of them.
 
 1. Import the `PrismLogger` class from prism-logger
 
@@ -24,6 +26,8 @@ import { PrismLogger } from "prism-logger";
 PrismLogger.yellow("This will be printed in yellow");
 // The yellow() logs the text in yellow font
 ```
+
+NOTE: PrismLogger has static methods so you don't need to create an object but for ConsoleLogger an object has to be created with a boolean parameter named 'debug'. This will determine whether the logs will show up in the console. This will be particulary useful when you need to show some logs in development for dubugging but you don't want them in produnction environment. Setting the debug value to 'false' in production will remove all logs.
 
 Pretty simple, right? Well that's the purpose of this package. There's also a way to make your own custom logger. But let's discuss it later.
 
@@ -61,7 +65,7 @@ First let's dicuss other built-in log functions.
 | .cyanBg()    | Logs a message with cyan background           |
 | .whiteBg()   | Logs a message with white background          |
 
-That's all for the built-in functions. Now let's talk about making your own custom logs.
+That's all for the built-in functions. The above functions are availabe in both the loggers. Now let's talk about making your own custom logs.
 
 You can use the .logBg() to create a custom log.
 
@@ -85,9 +89,9 @@ You can use any of the following colors:
 ## Examples
 
 ```js
-import { PrismLogger } from "@your-username/prism-logger";
+import { PrismLogger, ConsoleLogger } from "prism-logger";
 
-const logger = new PrismLogger();
+const logger = new ConsoleLogger((debug = true)); // the boolean variable debug determines whether the logger will log anything
 
 logger.log("Hello, world!", "cyan");
 logger.error("Something went wrong");
